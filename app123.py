@@ -7,7 +7,7 @@ import os
 import gdown
 from tensorflow.keras.models import load_model
 
-url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+url =" https://drive.google.com/file/d/1-_fheugEQeUInNDXTnZIZTyr1okhN1r8/view?usp=drive_link"
 output = "soil_classifier.keras"
 
 if not os.path.exists(output):  # Download only if not exists
