@@ -21,7 +21,7 @@ categories = ["Alluvial soil", "Black soil", "Clay soil","Red soil"]
 
 
 # Load crop data
-crop_data = pd.read_csv(r"C:\Users\edwin\Desktop\alfred\soil_to_crop.csv")
+crop_data = pd.read_csv(r"https://raw.githubusercontent.com/FABULOUS51/FARMER-ASSISTANT/refs/heads/main/soil_to_crop.csv")
 
 # Function to predict soil type from an image
 def predict_soil(image):
