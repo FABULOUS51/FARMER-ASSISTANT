@@ -61,7 +61,7 @@ with col1:
 with col2:
     st.image(r"5e7c07a78fb76a9066bbfa410458b849.jpg",use_container_width=True)
 with col3:
-    st.image(r"C:\Users\edwin\Desktop\alfred\farmers\lovepik-farmer-farming-in-wheat-field-picture_501611486.jpg",use_container_width=True)
+    st.image(r"lovepik-farmer-farming-in-wheat-field-picture_501611486.jpg",use_container_width=True)
 st.write("**UPLOAD SOIL IMAGES FOR CROP RECOMMENDATION**.")
 
 # Upload image
