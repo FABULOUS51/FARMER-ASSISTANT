@@ -7,13 +7,17 @@ import os
 import gdown
 from tensorflow.keras.models import load_model
 
-url =" https://drive.google.com/file/d/1-_fheugEQeUInNDXTnZIZTyr1okhN1r8/view?usp=drive_link"
+import gdown
+from tensorflow.keras.models import load_model
+
+url = "https://drive.google.com/uc?id=1-_fheugEQeUInNDXTnZIZTyr1okhN1r8"
 output = "soil_classifier.keras"
 
 if not os.path.exists(output):  # Download only if not exists
     gdown.download(url, output, quiet=False)
 
 model = load_model(output)
+
 
 
 # Define categories (soil types)
