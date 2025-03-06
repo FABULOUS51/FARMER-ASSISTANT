@@ -3,11 +3,18 @@ import streamlit as st
 import cv2
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
 import os
+import gdown
+from tensorflow.keras.models import load_model
 
-# Load trained model
-model = load_model(r"C:\Users\edwin\Desktop\alfred\Dataset\soil_classifier.keras")
+url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+output = "soil_classifier.keras"
+
+if not os.path.exists(output):  # Download only if not exists
+    gdown.download(url, output, quiet=False)
+
+model = load_model(output)
+
 
 # Define categories (soil types)
 categories = ["Alluvial soil", "Black soil", "Clay soil","Red soil"]
