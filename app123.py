@@ -77,4 +77,4 @@ if uploaded_file is not None:
     # Suggest crops
    recommended_crops = suggest_crops(predicted_soil)
    st.info(f"**Recommended Crops:** {', '.join(recommended_crops)}")
-   st.image(r"C:\Users\edwin\Desktop\alfred\farmers\farmers-7457046_1280.jpg", caption="Support Farmers for a Better Future", use_container_width=True)
+   st.image(r"farmers-7457046_1280.jpg", caption="Support Farmers for a Better Future", use_container_width=True)
