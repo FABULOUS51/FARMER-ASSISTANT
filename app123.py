@@ -56,7 +56,27 @@ def suggest_crops(soil_type):
 
 
 # Streamlit Web App
+st.markdown("""
+    <style>
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  /* Full viewport height */
+        }
+    </style>
+""", unsafe_allow_html=True)
 
+# Create a container with the custom CSS class to center content
+st.markdown('<div class="centered">', unsafe_allow_html=True)
+
+# Display the image in the center of the page
+st.image(r"LOGO.png", width=300)
+
+# Close the div container
+st.markdown('</div>', unsafe_allow_html=True)
+
+# Add any other Streamlit elements below if needed
 st.title("FARMER BUDDY SYSTEM")
 col1, col2, col3 = st.columns(3)
 with col1:
