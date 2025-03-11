@@ -56,6 +56,7 @@ def suggest_crops(soil_type):
 
 
 # Streamlit Web App
+st.image(r"", width=300)
 
 st.title("FARMER BUDDY SYSTEM")
 col1, col2, col3 = st.columns(3)
