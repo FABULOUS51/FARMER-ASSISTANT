@@ -51,8 +51,13 @@ def suggest_crops(soil_type):
 
     return crops.iloc[0].split(', ') if isinstance(crops.iloc[0], str) else []
 
+
+
+
+
 # Streamlit Web App
-st.image(r"LOGO-removebg-preview.png", width=300)
+
+st.title("🌱 FARMER BUDDY SYSTEM")
 col1, col2, col3 = st.columns(3)
 with col1:
     st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",use_container_width=True)
