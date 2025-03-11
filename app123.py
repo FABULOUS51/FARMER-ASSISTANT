@@ -56,34 +56,7 @@ def suggest_crops(soil_type):
 
 
 # Streamlit Web App
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Image</title>
-    <style>
-        /* CSS to center the image */
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-container {
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="image-container">
-        <img src="LOGO-removebg-preview.png" width="300" alt="Logo">
-    </div>
-</body>
-</html>
-
+st.image(r"LOGO-removebg-preview.png", width=300)
 col1, col2, col3 = st.columns(3)
 with col1:
     st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",use_container_width=True)
