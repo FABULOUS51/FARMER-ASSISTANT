@@ -51,10 +51,6 @@ def suggest_crops(soil_type):
 
     return crops.iloc[0].split(', ') if isinstance(crops.iloc[0], str) else []
 
-
-
-
-
 # Streamlit Web App
 st.image(r"LOGO-removebg-preview.png", width=300)
 col1, col2, col3 = st.columns(3)
