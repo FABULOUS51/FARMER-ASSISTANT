@@ -56,9 +56,9 @@ def suggest_crops(soil_type):
 
 
 # Streamlit Web App
-with col3:
+with col5:
     st.image(r"LOGO-removebg-preview.png", width=300)
-col1, col2, col3 = st.columns(3)
+col1, col2, col3,col4,col5 = st.columns(5)
 with col1:
     st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",use_container_width=True)
 with col2:
