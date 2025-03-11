@@ -22,10 +22,10 @@ crop_data = pd.read_csv(r"https://raw.githubusercontent.com/FABULOUS51/FARMER-AS
 
 # Create a dictionary with crop names and their Wikipedia links
 crop_wikipedia_links = {
-"Rice":"https://en.wikipedia.org/wiki/Rice"
- "Wheat":"https://en.wikipedia.org/wiki/Wheat"
- "Sugercane":"https://en.wikipedia.org/wiki/Sugarcane"
-  "Maize":"https://en.wikipedia.org/wiki/Maize"
+"Rice:https://en.wikipedia.org/wiki/Rice"
+ "Wheat:https://en.wikipedia.org/wiki/Wheat"
+ "Sugercane:https://en.wikipedia.org/wiki/Sugarcane"
+  "Maize:https://en.wikipedia.org/wiki/Maize"
    
     # Add more crops and their Wikipedia links as needed
 }
