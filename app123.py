@@ -57,7 +57,7 @@ def suggest_crops(soil_type):
 
 # Streamlit Web App
 
- st.image(r"https://github.com/FABULOUS51/FARMER-ASSISTANT/blob/main/LOGO.png", use_container_width=True)
+ st.image(r"LOGO.png", use_container_width=True)
 col1, col2, col3 = st.columns(3)
 with col1:
     st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",use_container_width=True)
