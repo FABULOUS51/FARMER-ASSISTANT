@@ -34,8 +34,8 @@ def predict_soil(image):
     img = np.expand_dims(img, axis=0)
 
     with st.spinner("🔍 Analyzing soil image..."):
-        time.sleep(2)  # Animation effect
-        prediction = model.predict(img)
+         time.sleep(2)  # Animation effect
+         prediction = model.predict(img)
     
     soil_type = categories[np.argmax(prediction)]
     return soil_type
