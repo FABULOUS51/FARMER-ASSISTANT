@@ -82,7 +82,7 @@ if uploaded_file is not None:
 
     # Display recommended crops in a large column
    st.subheader("🌾 Recommended Crops:")
-    recommended_crops = suggest_crops(predicted_soil)
+   recommended_crops = suggest_crops(predicted_soil)
     
     crop_col = st.columns(1)[0]  
     with crop_col:
