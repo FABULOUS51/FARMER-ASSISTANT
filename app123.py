@@ -66,7 +66,7 @@ soil_col1, soil_col2, soil_col3, soil_col4 = st.columns(4)
 with soil_col1:
     st.image(r"Alluvial_3.jpg", caption="Alluvial Soil", use_container_width=True)
 with soil_col2:
-    st.image(r"C:\Users\edwin\Desktop\alfred\Dataset\test\Black Soil\Black_6.jpg", caption="Black Soil", use_container_width=True)
+    st.image(r"Black_10.jpg", caption="Black Soil", use_container_width=True)
 with soil_col3:
     st.image(r"", caption="Clay Soil",use_container_width=True)
 with soil_col4:
