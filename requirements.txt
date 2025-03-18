@@ -5,4 +5,5 @@ opencv-python-headless
 tensorflow
 gdown
 time
-pip
+pip==25.0.1
+
