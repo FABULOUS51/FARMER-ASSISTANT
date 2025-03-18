@@ -5,7 +5,6 @@ import pandas as pd
 import os
 import gdown
 from tensorflow.keras.models import load_model
-import time 
 import gdown
 
 url = "https://drive.google.com/uc?id=1-_fheugEQeUInNDXTnZIZTyr1okhN1r8"
@@ -31,10 +30,7 @@ def predict_soil(image):
     img = cv2.imdecode(np.frombuffer(image.read(), np.uint8), 1)
     img = cv2.resize(img, (img_size, img_size)) / 255.0
     img = np.expand_dims(img, axis=0)
-
-    with st.spinner("🔍 Analyzing soil image..."):
-         time.sleep(2)  # Animation effect
-         prediction = model.predict(img)
+    prediction = model.predict(img)
     
     soil_type = categories[np.argmax(prediction)]
     return soil_type
