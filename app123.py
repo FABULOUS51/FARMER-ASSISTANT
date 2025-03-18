@@ -74,7 +74,7 @@ with soil_col4:
 # Upload image
 uploaded_file = st.file_uploader("Choose a soil image...", type=["jpg", "png", "jpeg"])
 
-uploaded_file:
+ if uploaded_file:
     st.image(uploaded_file, caption="Uploaded Soil Image", use_container_width=True)
 
     predicted_soil = predict_soil(uploaded_file)
