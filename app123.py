@@ -68,9 +68,9 @@ with soil_col1:
 with soil_col2:
     st.image(r"Black_10.jpg", caption="Black Soil", use_container_width=True)
 with soil_col3:
-    st.image(r"", caption="Clay Soil",use_container_width=True)
+    st.image(r"Clay_5.jpg", caption="Clay Soil",use_container_width=True)
 with soil_col4:
-    st.image(r"C:\Users\edwin\Desktop\alfred\Dataset\test\Red soil\Copy of image3.jpeg", caption="Red Soil",use_container_width=True)
+    st.image(r"", caption="Red Soil",use_container_width=True)
 # Upload image
 uploaded_file = st.file_uploader("Choose a soil image...", type=["jpg", "png", "jpeg"])
 
