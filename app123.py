@@ -78,7 +78,7 @@ if uploaded_file is not None:
    st.image(uploaded_file, caption="Uploaded Soil Image", use_container_width=True)
 
     #redicted_soil = predict_soil(uploaded_file)
-    st.success(f"✅ **Predicted Soil Type:** {predicted_soil}")
+   st.success(f"✅ **Predicted Soil Type:** {predicted_soil}")
 
     # Display recommended crops in a large column
     st.subheader("🌾 Recommended Crops:")
