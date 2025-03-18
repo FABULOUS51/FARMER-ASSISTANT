@@ -87,7 +87,7 @@ if uploaded_file is not None:
    crop_col = st.columns(1)[0]  
    with crop_col:
          for crop in recommended_crops:
-             st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True) Predict soil type
+             st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True) 
   
    st.image(r"farmers-7457046_1280.jpg", caption="Support Farmers for a Better Future", use_container_width=True)
 
