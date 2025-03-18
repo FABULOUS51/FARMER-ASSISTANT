@@ -74,20 +74,21 @@ with soil_col4:
 # Upload image
 uploaded_file = st.file_uploader("Choose a soil image...", type=["jpg", "png", "jpeg"])
 
-if uploaded_file is not None:
-   st.image(uploaded_file, caption="Uploaded Soil Image", use_container_width=True)
+uploaded_file:
+    st.image(uploaded_file, caption="Uploaded Soil Image", use_container_width=True)
 
-    #redicted_soil = predict_soil(uploaded_file)
-   st.success(f"✅ **Predicted Soil Type:** {predicted_soil}")
+    predicted_soil = predict_soil(uploaded_file)
+    st.success(f"✅ **Predicted Soil Type:** {predicted_soil}")
 
     # Display recommended crops in a large column
-   st.subheader("🌾 Recommended Crops:")
-   recommended_crops = suggest_crops(predicted_soil)
+    st.subheader("🌾 Recommended Crops:")
+    recommended_crops = suggest_crops(predicted_soil)
     
-   crop_col = st.columns(1)[0]  
-   with crop_col:
-         for crop in recommended_crops:
-             st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True) 
+    crop_col = st.columns(1)[0]  
+    with crop_col:
+        for crop in recommended_crops:
+            st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True)
+ 
   
    st.image(r"farmers-7457046_1280.jpg", caption="Support Farmers for a Better Future", use_container_width=True)
 
