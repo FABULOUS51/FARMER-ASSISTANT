@@ -28,32 +28,27 @@ crop_data = pd.read_csv(r"https://raw.githubusercontent.com/FABULOUS51/FARMER-AS
 
 # Function to predict soil type from an image
 def predict_soil(image):
-    img_size = 155  # Same as used during training
-    img = cv2.imdecode(np.frombuffer(image.read(), np.uint8), 1)  # Read image from file buffer
-    img = cv2.resize(img, (img_size, img_size)) / 255.0  # Resize and normalize
-    img = np.expand_dims(img, axis=0)  # Add batch dimension
-    prediction = model.predict(img)
+    img_size = 155
+    img = cv2.imdecode(np.frombuffer(image.read(), np.uint8), 1)
+    img = cv2.resize(img, (img_size, img_size)) / 255.0
+    img = np.expand_dims(img, axis=0)
+
+    with st.spinner("🔍 Analyzing soil image..."):
+        time.sleep(2)  # Animation effect
+        prediction = model.predict(img)
+    
     soil_type = categories[np.argmax(prediction)]
     return soil_type
 
-
+# Function to suggest crops based on soil type
 def suggest_crops(soil_type):
-    soil_type = soil_type.strip()  # Remove leading/trailing spaces
-    print(f"🔍 Debug: Predicted Soil Type -> '{soil_type}'")  # Debugging output
-    print(f"🔍 Debug: Available Soil Types in CSV -> {crop_data['soil_type'].unique()}")  # Print unique values from CSV
-
-    # Ensure soil type comparison is consistent
+    soil_type = soil_type.strip()
     crops = crop_data[crop_data['soil_type'].str.strip().str.lower() == soil_type.lower()]['crops']
     
     if crops.empty:
-        print("⚠️ No match found in CSV!")
-        return "No crops found for this soil type"
-
+        return ["No crops found for this soil type"]
+    
     return crops.iloc[0].split(', ') if isinstance(crops.iloc[0], str) else []
-
-
-
-
 
 # Streamlit Web App
 
@@ -66,20 +61,34 @@ with col2:
 with col3:
     st.image(r"lovepik-farmer-farming-in-wheat-field-picture_501611486.jpg",use_container_width=True)
 st.write("**UPLOAD SOIL IMAGES FOR CROP RECOMMENDATION**.")
-
+st.subheader("🖼️ Sample Soil Types")
+soil_col1, soil_col2, soil_col3, soil_col4 = st.columns(4)
+with soil_col1:
+    st.image(r"C:\Users\edwin\Desktop\alfred\Dataset\test\Alluvial soil\Alluvial_3.jpg", caption="Alluvial Soil", use_container_width=True)
+with soil_col2:
+    st.image(r"C:\Users\edwin\Desktop\alfred\Dataset\test\Black Soil\Black_6.jpg", caption="Black Soil", use_container_width=True)
+with soil_col3:
+    st.image(r"C:\Users\edwin\Desktop\alfred\Dataset\test\Clay soil\Clay_10.jpg", caption="Clay Soil",use_container_width=True)
+with soil_col4:
+    st.image(r"C:\Users\edwin\Desktop\alfred\Dataset\test\Red soil\Copy of image3.jpeg", caption="Red Soil",use_container_width=True)
 # Upload image
 uploaded_file = st.file_uploader("Choose a soil image...", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
    st.image(uploaded_file, caption="Uploaded Soil Image", use_container_width=True)
 
-    # Predict soil type
-   predicted_soil = predict_soil(uploaded_file)
-   st.success(f"**Predicted Soil Type:** {predicted_soil}")
+    #redicted_soil = predict_soil(uploaded_file)
+    st.success(f"✅ **Predicted Soil Type:** {predicted_soil}")
 
-    # Suggest crops
-   recommended_crops = suggest_crops(predicted_soil)
-   st.info(f"**Recommended Crops:** {', '.join(recommended_crops)}")
+    # Display recommended crops in a large column
+    st.subheader("🌾 Recommended Crops:")
+    recommended_crops = suggest_crops(predicted_soil)
+    
+    crop_col = st.columns(1)[0]  
+    with crop_col:
+        for crop in recommended_crops:
+            st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True) Predict soil type
+  
    st.image(r"farmers-7457046_1280.jpg", caption="Support Farmers for a Better Future", use_container_width=True)
 
 
