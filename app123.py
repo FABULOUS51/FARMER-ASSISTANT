@@ -85,7 +85,7 @@ if uploaded_file is not None:
    recommended_crops = suggest_crops(predicted_soil)
     
    crop_col = st.columns(1)[0]  
-      with crop_col:
+   with crop_col:
          for crop in recommended_crops:
              st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True) Predict soil type
   
