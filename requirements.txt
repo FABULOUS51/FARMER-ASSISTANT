@@ -4,6 +4,5 @@ pandas
 opencv-python-headless
 tensorflow
 gdown
-time
 pip==25.0.1
 
