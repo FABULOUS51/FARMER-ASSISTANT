@@ -84,10 +84,10 @@ if uploaded_file is not None:
    st.subheader("🌾 Recommended Crops:")
    recommended_crops = suggest_crops(predicted_soil)
     
-    crop_col = st.columns(1)[0]  
-    with crop_col:
-        for crop in recommended_crops:
-            st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True) Predict soil type
+   crop_col = st.columns(1)[0]  
+      with crop_col:
+         for crop in recommended_crops:
+             st.markdown(f"<div class='crop-box'>✅ {crop}</div>", unsafe_allow_html=True) Predict soil type
   
    st.image(r"farmers-7457046_1280.jpg", caption="Support Farmers for a Better Future", use_container_width=True)
 
