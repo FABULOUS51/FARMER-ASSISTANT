@@ -6,7 +6,6 @@ import os
 import gdown
 from tensorflow.keras.models import load_model
 import time 
-from PIL import Image 
 import gdown
 
 url = "https://drive.google.com/uc?id=1-_fheugEQeUInNDXTnZIZTyr1okhN1r8"
