@@ -47,30 +47,30 @@ def suggest_crops(soil_type):
 
 # Streamlit Web App
 
-st.title("🌱 FARMER BUDDY SYSTEM")
+st.title("FARMER BUDDY SYSTEM")
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",use_container_width=True)
+    st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",use_container_width=400)
 with col2:
-    st.image(r"5e7c07a78fb76a9066bbfa410458b849.jpg",use_container_width=True)
+    st.image(r"5e7c07a78fb76a9066bbfa410458b849.jpg",use_container_width=400)
 with col3:
-    st.image(r"lovepik-farmer-farming-in-wheat-field-picture_501611486.jpg",use_container_width=True)
+    st.image(r"lovepik-farmer-farming-in-wheat-field-picture_501611486.jpg",use_container_width=400)
 st.write("**UPLOAD SOIL IMAGES FOR CROP RECOMMENDATION**.")
 st.subheader("🖼️ Sample Soil Types")
 soil_col1, soil_col2, soil_col3, soil_col4 = st.columns(4)
 with soil_col1:
-    st.image(r"Alluvial_3.jpg", caption="Alluvial Soil", use_container_width=True)
+    st.image(r"Alluvial_3.jpg", caption="Alluvial Soil", use_container_width=300)
 with soil_col2:
-    st.image(r"Black_10.jpg", caption="Black Soil", use_container_width=True)
+    st.image(r"Black_10.jpg", caption="Black Soil", use_container_width=300)
 with soil_col3:
-    st.image(r"Clay_5.jpg", caption="Clay Soil",use_container_width=True)
+    st.image(r"Clay_5.jpg", caption="Clay Soil",use_container_width=300)
 with soil_col4:
-    st.image(r"Copy of image5.jpeg", caption="Red Soil",use_container_width=True)
+    st.image(r"Copy of image5.jpeg", caption="Red Soil",use_container_width=300)
 # Upload image
 uploaded_file = st.file_uploader("Choose a soil image...", type=["jpg", "png", "jpeg"])
 
 if uploaded_file:
-    st.image(uploaded_file, caption="Uploaded Soil Image", use_container_width=True)
+    st.image(uploaded_file, caption="Uploaded Soil Image", use_container_width=400)
 
     predicted_soil = predict_soil(uploaded_file)
     st.success(f"✅ **Predicted Soil Type:** {predicted_soil}")
