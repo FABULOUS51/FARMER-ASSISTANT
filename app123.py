@@ -50,9 +50,9 @@ def suggest_crops(soil_type):
 st.title("FARMER BUDDY SYSTEM")
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",use_container_width=400)
+    st.image(r"360_F_123708977_X8lHoZ3iSb6rRjsmFb2mxGNp2dngJrjh.jpg",width=400)
 with col2:
-    st.image(r"5e7c07a78fb76a9066bbfa410458b849.jpg",use_container_width=400)
+    st.image(r"5e7c07a78fb76a9066bbfa410458b849.jpg",width=400)
 with col3:
     st.image(r"lovepik-farmer-farming-in-wheat-field-picture_501611486.jpg",use_container_width=400)
 st.write("**UPLOAD SOIL IMAGES FOR CROP RECOMMENDATION**.")
