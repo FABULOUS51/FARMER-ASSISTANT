@@ -59,13 +59,13 @@ st.write("**UPLOAD SOIL IMAGES FOR CROP RECOMMENDATION**.")
 st.subheader("🖼️ Sample Soil Types")
 soil_col1, soil_col2, soil_col3, soil_col4 = st.columns(4)
 with soil_col1:
-    st.image(r"Alluvial_3.jpg", caption="Alluvial Soil", use_container_width=300)
+    st.image(r"Alluvial_3.jpg", caption="Alluvial Soil",width=200)
 with soil_col2:
     st.image(r"Black_10.jpg", caption="Black Soil",width=200)
 with soil_col3:
-    st.image(r"Clay_5.jpg", caption="Clay Soil",use_container_width=300)
+    st.image(r"Clay_5.jpg", caption="Clay Soil",width=200)
 with soil_col4:
-    st.image(r"Copy of image5.jpeg", caption="Red Soil",use_container_width=300)
+    st.image(r"Copy of image5.jpeg", caption="Red Soil",width=200)
 # Upload image
 uploaded_file = st.file_uploader("Choose a soil image...", type=["jpg", "png", "jpeg"])
 
