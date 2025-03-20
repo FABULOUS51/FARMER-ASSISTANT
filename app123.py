@@ -58,14 +58,23 @@ with col3:
 st.write("**UPLOAD SOIL IMAGES FOR CROP RECOMMENDATION**.")
 st.subheader("🖼️ Sample Soil Types")
 soil_col1, soil_col2, soil_col3, soil_col4 = st.columns(4)
+
+# Using columns to organize the layout for displaying imag
+
+# Specifying a fixed width and height for all images
+image_width = 200  # You can adjust this value as needed
+image_height = 200  # You can adjust this value as needed
+
+# Displaying the images in the respective columns with captions
 with soil_col1:
-    st.image(r"Alluvial_3.jpg", caption="Alluvial Soil",use_container_width=200)
+    st.image(r"Alluvial_3.jpg", caption="Alluvial Soil", use_container_width=True, width=image_width, height=image_height)
 with soil_col2:
-    st.image(r"Black_10.jpg", caption="Black Soil",use_container_width=200)
+    st.image(r"Black_10.jpg", caption="Black Soil", use_container_width=True, width=image_width, height=image_height)
 with soil_col3:
-    st.image(r"Clay_5.jpg", caption="Clay Soil",use_container_width=200)
+    st.image(r"Clay_5.jpg", caption="Clay Soil", use_container_width=True, width=image_width, height=image_height)
 with soil_col4:
-    st.image(r"Copy of image5.jpeg", caption="Red Soil",use_container_width=200)
+    st.image(r"Copy of image5.jpeg", caption="Red Soil", use_container_width=True, width=image_width, height=image_height)
+
 # Upload image
 uploaded_file = st.file_uploader("Choose a soil image...", type=["jpg", "png", "jpeg"])
 
